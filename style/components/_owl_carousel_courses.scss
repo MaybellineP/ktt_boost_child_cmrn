@@ -1,0 +1,91 @@
+.cstm_courses_component {
+  //padding: 0.5rem;
+  //border: 1px solid #dee2e6;
+  //border-radius: 0.5rem;
+
+  .owl-carousel {
+    display: flex;
+    .owl-stage-outer {
+      .owl-stage {
+        padding-bottom: 8px;
+        .item {
+          display: flex; /* Utilizamos flexbox para centrar */
+          justify-content: center; /* Centramos horizontalmente */
+          //align-items: center; /* Centramos verticalmente */
+
+          &__card_course {
+            border-radius: 16px;
+            background: #fff;
+
+            /* Shadow/shadow-sm */
+            box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05),
+              0px 0px 1px 0px rgba(12, 26, 75, 0.24);
+            //border: 1px solid #dee2e6;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 100px 50px;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "img_course"
+              "content_course"
+              "cta_course";
+
+            .img_course {
+              grid-area: img_course;
+              padding: 8px;
+              overflow: hidden;
+              img {
+                border-radius: 12px 12px 0 0;
+              }
+            }
+
+            .content_course {
+              grid-area: content_course;
+              padding: 0 8px;
+
+              .name_course {
+                width: 100%;
+                height: auto;
+                font-size: 1em;
+                line-height: 2em;
+                font-weight: 500;
+              }
+              hr {
+                visibility: hidden;
+                border: 0;
+                margin: 0;
+              }
+              p {
+                font-size: 0.8em;
+                height: 60px;
+                overflow: hidden;
+                margin-bottom: 0;
+              }
+            }
+
+            .cta_course {
+              grid-area: cta_course;
+              display: flex;
+              justify-self: center;
+              align-self: center;
+
+              .course-btn {
+                background-color: #2f80ed;
+                padding: 12px 20px;
+                border-radius: 6px;
+                /* Button/Base */
+                text-decoration: none;
+                color: white;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 12px; /* 100% */
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

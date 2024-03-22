@@ -2,10 +2,10 @@ require(["jquery"], function ($) {
   $(document).ready(function () {
     var userToken = "786b2d70191e8e690e6c3b4ac7045a45";
 
-    // URL para la API REST de Moodle
+    // URL for Moodle REST API
     var moodleUrl = M.cfg.wwwroot + "/webservice/rest/server.php";
 
-    // Parámetros para la llamada a la API
+    // Parameters for the API call
     var data = {
       wstoken: userToken,
       wsfunction: "core_course_get_courses",
@@ -40,8 +40,8 @@ require(["jquery"], function ($) {
         script.src = src;
         script.integrity = integrity;
         script.crossOrigin = crossorigin;
-        script.onload = resolve; // Resuelve la promesa cuando el script se haya cargado
-        script.onerror = reject; // Rechaza la promesa si hay un error
+        script.onload = resolve; // Resolve the promise when the script has loaded
+        script.onerror = reject; // Reject the promise if there is an error
         document.head.appendChild(script);
       });
     }
@@ -55,42 +55,31 @@ require(["jquery"], function ($) {
     ])
       .then(function () {
         console.log("Todos los scripts han sido cargados");
-        // Realizar la llamada AJAX a la API de Moodle
         $.ajax({
           type: "GET",
           url: moodleUrl,
           data: data,
           success: function (response) {
             var owl = $("#owl-carousel-courses");
-            owl.empty(); // Vacía el contenedor antes de agregar nuevos elementos
+            owl.empty(); // Empty the container before adding new items
 
-            // Descarta el primer elemento del array
+            // Discard the first element of the array
             var courses = response.slice(1);
 
             courses.forEach(function (course) {
-              // Extraer la URL de la imagen del resumen del curso
+              // Extract Course Summary Image URL
               var imgSrcMatch = course.summary.match(/<img.*?src="(.*?)"/);
               var imgSrc = imgSrcMatch
                 ? imgSrcMatch[1].replace("/webservice", "")
                 : "path/to/default/image.jpg";
-              // imagen predeterminada si no hay imagen del resumen del curso
-              // Limpiar course.summary
               course.summary = course.summary
                 .replace(/<hr\s*\/?>/g, "")
                 .replace(
                   /<p><span><img class="[^"]+" src="[^"]+" alt="[^"]+" width="[^"]+" height="[^"]+" \/><\/span><\/p>/g,
                   ""
                 );
-              var courseUrl =
-                "/course/view.php?id=" + course.id;
+              var courseUrl = "/course/view.php?id=" + course.id;
 
-              // Logs para depuración
-              console.log("ID :" + course.id)
-              console.log("courseUrl: " + courseUrl)
-              console.log("-- Course:", course);
-              // ... (otros logs)
-
-              // Agregar al carrusel
               owl.append(
                 '<div class="item">' +
                   '<div class="item__card_course">' +
@@ -112,7 +101,6 @@ require(["jquery"], function ($) {
               );
             });
 
-            // Inicializa Owl Carousel solo una vez, después de agregar todos los elementos
             owl.owlCarousel({
               loop: true,
               margin: 20,
@@ -138,12 +126,12 @@ require(["jquery"], function ($) {
             });
           },
           error: function (error) {
-            console.log("Error al obtener información de los cursos:", error);
+            console.log("Error when obtaining course information:", error);
           },
         });
       })
       .catch(function () {
-        console.log("Algo salió mal al cargar los scripts");
+        console.log("Something went wrong loading the scripts");
       });
 
     //$("#login").remove();
@@ -211,15 +199,37 @@ require(["jquery"], function ($) {
       }, slidingAT * 0.75);
     }
 
-    // fin slider
+
   });
+
+  
+  $(document).ready(function() {
+    $('.contact-tabs_button').on('click', function() {
+        // Obtener el índice del botón de pestaña clickeado
+        var tabIndex = $(this).index();
+
+        // Ocultar todos los contenidos de las pestañas
+        $('.contact-tabs_content').removeClass('active').hide();
+
+        // Mostrar el contenido de la pestaña correspondiente al botón clickeado
+        $('.contact-tabs_content').eq(tabIndex).addClass('active').show();
+
+        // Remover la clase 'active' de todos los botones de pestaña
+        $('.contact-tabs_button').removeClass('active');
+
+        // Agregar la clase 'active' al botón de pestaña clickeado
+        $(this).addClass('active');
+    });
+});
+
+
+
 
   function showRandomImage(className) {
     var images = $("." + className);
 
     // Comprobar el ancho de la ventana
     if (window.innerWidth <= 713) {
-      // Si el ancho de la ventana es menor o igual a 711px
       images.hide();
       var randomIndex = Math.floor(Math.random() * images.length);
       images.eq(randomIndex).show();
@@ -229,13 +239,12 @@ require(["jquery"], function ($) {
   }
 
   // Definir el intervalo (por ejemplo, 3 segundos)
-  var intervalo = 3000; // 3000 milisegundos = 3 segundos
+  var intervalo = 3000;
 
-  // Iniciar el intervalo
+  // Start interval
   setInterval(function () {
     showRandomImage("sl1");
     showRandomImage("sl2");
     showRandomImage("sl3");
-    showRandomImage("sl5");
   }, intervalo);
 });

@@ -1,0 +1,61 @@
+.contact-tabs {
+  max-width: 788px !important;
+    margin: 12px auto;
+    text-align: justify;
+    
+  .contact-tabs_buttons {
+    display: inline-flex;
+    margin-bottom: 25px;
+    border-bottom: 1px solid lightgrey;
+    .contact-tabs_button {
+      float: left;
+    color: #0f6cbf;
+    text-decoration: none;
+    background-color: transparent;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      &:hover,
+      &.active {
+        border-color: transparent;
+        border-bottom: 2px solid #0f6cbf;
+        background: transparent;
+        color: #495057;
+      }
+    }
+  }
+
+  .contact-tabs_content {
+    clear: both;
+   display: none;
+
+    .lista-alfabetica {
+      list-style-type: upper-alpha;
+
+      li {
+        padding-bottom: 10px;
+
+        ul {
+          padding-top: 10px;
+        }
+      }
+    }
+
+    .lista-numerada {
+      list-style-type: upper-alpha;
+
+      li {
+        padding-bottom: 10px;
+
+        ul {
+          padding-top: 10px;
+        }
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
