@@ -1,0 +1,51 @@
+// Responsive mixins 
+
+// desktop
+
+@mixin media_515 {
+    @media only screen and (max-width: 515px) {
+        @content;
+    }
+}
+
+@mixin media_580 {
+    @media only screen and (max-width: 580px) {
+        @content;
+    }
+}
+
+@mixin brk575 {
+    @media only screen and (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin brk713 {
+    @media only screen and (max-width: 711px) {
+        @content;
+    }
+}
+
+// tablet
+@mixin tablet {
+    @media only screen and (max-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+// mobile
+
+
+// portrait mobile
+@mixin mobile_prt {
+    @media only screen and (max-width: 914px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// landscape mobile
+@mixin mobile_lnd {
+    @media only screen and (max-width: 914px) and (orientation: landscape) {
+        @content;
+    }
+}
