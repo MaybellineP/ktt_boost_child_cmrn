@@ -64,8 +64,9 @@ $string['footer_titleMenu2'] = 'LIENS UTILES';
 $string['footer_menu1Item1'] = 'Politique de confidentialité';
 $string['footer_menu1Item3'] = 'Termes';
 
-$string['footer_orgData'] = 'POPULATION SERVICES INTERNATIONAL CAMEROON | ??? | ???';
-$string['footer_contactNumberLb'] = 'Appel:';
+$string['footer_orgData'] = '';
+$string['footer_contactNumberLb'] = 'Tél:';
+$string['footer_contactMail'] = 'courriel:';
 
 $string['footer_links'] = '';
 $string['footer_CPRS'] = '';

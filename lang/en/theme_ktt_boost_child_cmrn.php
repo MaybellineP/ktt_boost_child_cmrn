@@ -64,8 +64,9 @@ $string['footer_titleMenu2'] = 'USEFUL LINKS';
 $string['footer_menu1Item1'] = 'Privacy Policy';
 $string['footer_menu1Item3'] = 'Terms';
 
-$string['footer_orgData'] = 'POPULATION SERVICES INTERNATIONAL CAMEROON | PSI FIRST FLOOR, MBHILIBHI HOUSE, CNR MBHILIBHI & TSEKWANE STREET, MBABANE | P O BOX 170, EVENI, H103';
+$string['footer_orgData'] = '';
 $string['footer_contactNumberLb'] = 'Call:';
+$string['footer_contactMail'] = 'Email:';
 
 $string['footer_links'] = '';
 $string['footer_CPRS'] = '';
