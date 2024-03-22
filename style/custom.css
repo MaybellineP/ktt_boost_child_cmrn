@@ -163,7 +163,7 @@ h6 {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 22%));
-  grid-gap: 20px;
+  grid-gap: 4px;
   margin: 50px auto;
   padding: 0;
   justify-content: center;
@@ -375,6 +375,10 @@ h6 {
     justify-self: center;
   }
 }
+.myFooter .myFooter_wrp .footer_menu1 h3,
+.myFooter .myFooter_wrp .footer_menu1 h5 {
+  text-transform: uppercase;
+}
 .myFooter .myFooter_wrp .footer_menu2 {
   grid-area: footer_menu2;
   color: #000000;
@@ -383,6 +387,10 @@ h6 {
   .myFooter .myFooter_wrp .footer_menu2 {
     justify-self: center;
   }
+}
+.myFooter .myFooter_wrp .footer_menu2 h3,
+.myFooter .myFooter_wrp .footer_menu2 h5 {
+  text-transform: uppercase;
 }
 .myFooter .myFooter_wrp .psi_esw {
   grid-area: psi_esw;
@@ -394,8 +402,11 @@ h6 {
   }
 }
 .myFooter .myFooter_wrp .footer_menu1 h3,
+.myFooter .myFooter_wrp .footer_menu1 h5,
 .myFooter .myFooter_wrp .footer_menu2 h3,
-.myFooter .myFooter_wrp .psi_esw h3 {
+.myFooter .myFooter_wrp .footer_menu2 h5,
+.myFooter .myFooter_wrp .psi_esw h3,
+.myFooter .myFooter_wrp .psi_esw h5 {
   margin-bottom: 12px;
   font-size: 1em;
   font-weight: 500;
