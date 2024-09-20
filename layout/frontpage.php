@@ -111,7 +111,12 @@ $templatecontext = [
     'logofooter' => $OUTPUT->image_url('ou_img/logoFooter', 'theme_ktt_boost_child_cmrn'),
     'img1' => $OUTPUT->image_url('ou_img/img1', 'theme_ktt_boost_child_cmrn'),
     'img2' => $OUTPUT->image_url('ou_img/img2', 'theme_ktt_boost_child_cmrn'),
-    'img3' => $OUTPUT->image_url('ou_img/img3', 'theme_ktt_boost_child_cmrn')
+    'img3' => $OUTPUT->image_url('ou_img/img3', 'theme_ktt_boost_child_cmrn').
+    
+    'facebooksocialmedia' => $OUTPUT->image_url('facebook', 'theme_ktt_boost_child_cmrn'),
+    'xsocialmedia' => $OUTPUT->image_url('x', 'theme_ktt_boost_child_cmrn'),
+    'websocialmedia' => $OUTPUT->image_url('web', 'theme_ktt_boost_child_cmrn'),
+    'youtubesocialmedia' => $OUTPUT->image_url('youtube', 'theme_ktt_boost_child_cmrn')
 ];
 
 echo $OUTPUT->render_from_template('theme_ktt_boost_child_cmrn/frontpage', $templatecontext);
