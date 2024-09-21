@@ -65,3 +65,12 @@ div[role="main"] {
   margin: 0 auto;
   padding: 0 16px 50px;
 }
+
+//Footer icons
+
+li.iconfooter {
+  width: 25%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;
+}

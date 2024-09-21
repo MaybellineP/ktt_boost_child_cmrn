@@ -903,4 +903,11 @@ div[role=main] {
   padding: 0 16px 50px;
 }
 
+li.iconfooter {
+  width: 25%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
 /*# sourceMappingURL=custom.css.map */
