@@ -111,7 +111,7 @@ $templatecontext = [
     'logofooter' => $OUTPUT->image_url('ou_img/logoFooter', 'theme_ktt_boost_child_cmrn'),
     'img1' => $OUTPUT->image_url('ou_img/img1', 'theme_ktt_boost_child_cmrn'),
     'img2' => $OUTPUT->image_url('ou_img/img2', 'theme_ktt_boost_child_cmrn'),
-    'img3' => $OUTPUT->image_url('ou_img/img3', 'theme_ktt_boost_child_cmrn').
+    'img3' => $OUTPUT->image_url('ou_img/img3', 'theme_ktt_boost_child_cmrn'),
     
     'facebooksocialmedia' => $OUTPUT->image_url('facebook', 'theme_ktt_boost_child_cmrn'),
     'xsocialmedia' => $OUTPUT->image_url('x', 'theme_ktt_boost_child_cmrn'),
