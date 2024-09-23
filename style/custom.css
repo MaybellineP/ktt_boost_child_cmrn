@@ -904,10 +904,16 @@ div[role=main] {
 }
 
 li.iconfooter {
-  width: 25%;
+  width: 6vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+}
+li.iconfooter a {
+  margin: auto;
+}
+li.iconfooter a img {
+  height: 2.5vh;
 }
 
 /*# sourceMappingURL=custom.css.map */

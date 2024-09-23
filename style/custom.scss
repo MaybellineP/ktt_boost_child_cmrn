@@ -69,8 +69,14 @@ div[role="main"] {
 //Footer icons
 
 li.iconfooter {
-  width: 25%;
+  width: 6vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
   gap: 10px;
+  a {
+    margin: auto;
+    img {
+      height: 2.5vh;
+    }
+  }
 }
